@@ -151,15 +151,29 @@ body {
 
 /* Home Image */
 .home-img img {
-    width: 350px;
-    height: 350px;
+    width: 400px;   /* bigger size */
+    height: 400px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px double #0ef;
-    box-shadow: 0 0 20px #0ef;
+    box-shadow: 
+        0 0 25px #0ef,
+        0 0 50px #0ef,
+        0 0 100px #0ef;
     opacity: 0;
     animation: slideRight 0.5s ease forwards;
     animation-delay: 1s;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ✅ Hover effect with different glowing colors */
+.home-img img:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 0 30px magenta,
+        0 0 60px magenta,
+        0 0 120px magenta;
+    border: 4px double magenta;
 }
 
 /* About */
@@ -170,18 +184,39 @@ body {
    gap: 1.5rem;
 }
 
-.about-img img{
-    max-width: 600px;
-    height: auto;
-    width: 100%;
+.about-img {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    padding: 20px;           
+}
+
+.about-img img {
+    width: 420px;   /* slightly bigger than home (400px) */
+    height: 420px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px double #0ef;
-    box-shadow: 0 0 20px #0ef;
+    box-shadow: 
+        0 0 25px #0ef,
+        0 0 50px #0ef,
+        0 0 100px #0ef;
     opacity: 0;
     animation: slideRight 0.5s ease forwards;
-    margin: 10px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
 }
+
+/* ✅ Hover effect with different glow */
+.about-img img:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 
+        0 0 30px lime,
+        0 0 60px lime,
+        0 0 120px lime;
+    border: 4px double lime;
+}
+
+
 
 .about-text h2{
    font-size: 60px;
@@ -286,16 +321,14 @@ body {
     
 }
 
-/* Responsive grid for skill cards: auto-fit so it shrinks and grows */
-.Technical-bars{
+.Technical-bars {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap:30px;
+    grid-template-columns: repeat(2, 1fr); /* always 2 per row */
+    gap: 30px;
     margin-top: 70px;
-    justify-items: center; /* center each card */
+    justify-items: center;
     align-items: stretch;
 }
-
 /* Each skill card constrained and aligned center so icons & headings align */
 .Technical-bars div{
     background-color: rgba(255,255,255,0.02);
@@ -542,6 +575,7 @@ section{
     font-size:60px;
     line-height: 1;
     text-align: center;
+    margin-bottom: 40px;
 }
 .main-text h2 span{
     color: #0ef;
@@ -651,14 +685,13 @@ section{
 ========================= */
 .contact {
     display: grid;
-     grid-column: 1 / -1;
+    grid-column: 1 / -1;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 3rem;
     padding: 30px;
     margin-top: 30px;
 }
-
 
 .contact-text h2 {
     font-size: 60px;
@@ -681,7 +714,6 @@ section{
     margin-bottom: 2rem;
 }
 
-
 .contact-list {
     margin-bottom: 2rem;
 }
@@ -701,7 +733,6 @@ section{
     transform: translateX(-5px);
     color: #0ef;
 }
-
 
 .contact-icons {
     display: flex;
@@ -727,7 +758,6 @@ section{
     color: #000;
     box-shadow: 0 0 20px #0ef;
 }
-
 
 .contact-form form {
     position: relative;
@@ -779,6 +809,28 @@ section{
     font-size: 20px;
     padding: 10px;
     border-radius: 0.5rem;
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 768px) {
+    .contact {
+        grid-template-columns: 1fr; /* single column on small screens */
+        gap: 2rem;
+        padding: 20px;
+    }
+
+    .contact-text h2 {
+        font-size: 40px; /* smaller heading */
+    }
+
+    .contact-text p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .contact-form form .send {
+        width: 100%; 
+    }
 }
 
 
