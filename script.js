@@ -13,7 +13,7 @@ document.querySelectorAll('.radial-bars').forEach((bar) => {
     const percentageElem = bar.querySelector('.percentage');
 
     const targetPercent = parseInt(percentageElem.textContent);
-    const radius = circle.r.baseVal.value;
+    const radius = circle.r.baseVal.value;g
     const circumference = 2 * Math.PI * radius;
 
     circle.style.strokeDasharray = circumference;
