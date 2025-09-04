@@ -252,7 +252,7 @@ body {
     font-size: 13px;
     font-weight: 13px;
     border-radius:20px;
-    transition:background 0.5s, transform 0.5s;
+    transition: background 0.5s, transform 0.5s;
     box-shadow: 1px 1px 20px #012290f7,
              1px 1px 40px #0053b0f7;
     text-align: left;
@@ -525,32 +525,14 @@ section{
 
 
 .radial-bars svg {
-    display: block;
-    margin: 0 auto 15px auto;
-}
-
-/* Percentage text */
-.radial-bars .percentage {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-/* Skill text */
-.radial-bars .text {
-    font-size: 18px;
-    color: #0ef;
-    align-items: stretch;
-}
-
-/* PROFESSIONAL SKILLS - Animated Circular Bars */
-.radial-bars svg {
     transform: rotate(-90deg); /* start from top */
+    width: 150px;
+    height: 150px;
 }
 
 .radial-bars circle {
     fill: none;
-    stroke-width: 10;
+    stroke-width: 15;
     cx: 100;
     cy: 100;
     r: 80;
@@ -561,11 +543,24 @@ section{
 }
 
 .radial-bars circle.path-1 {
-    stroke: #00eeff; /* progress color */
-    stroke-dasharray: 502.65; /* 2 * PI * r (80*2*3.1416) */
+    stroke: #00bfff; /* Sky Blue color */
+    stroke-dasharray: 502.65; /* 2 * PI * r */
     stroke-dashoffset: 502.65;
     stroke-linecap: round;
     transition: stroke-dashoffset 1.5s ease;
+}
+
+.radial-bars .percentage {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.radial-bars .text {
+    font-size: 16px;
+    color: #00bfff; /* Sky blue text */
+    margin-top: 5px;
+    text-align: center;
 }
 .main-text{
     padding-top:10px ;
