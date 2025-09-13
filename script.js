@@ -1,6 +1,6 @@
 // ========== Typed.js Animation ==========
 var typed = new Typed('.text', {
-    strings: ['GOOD COMMUNICATOR', 'FRONTEND DEVELOPER', 'SOFTWARE DEVELOPER'],
+    strings: ['GOOD COMMUNICATOR', 'FRONTEND DEVELOPER'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
